@@ -14,6 +14,7 @@
 (setq use-package-always-ensure t)
 
 (add-to-list 'load-path "~/.emacs.d/custom")
+(add-to-list 'load-path "~/.emacs.d/private")
 
 (require 'setup-general)
 (if (version< emacs-version "24.4")
@@ -45,3 +46,15 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; ------------
+;; -- Macros --
+;; ------------
+(load "defuns-config.el")
+(global-set-key "\M-n" 'next5)
+(global-set-key "\M-p" 'prev5)
+(global-set-key "\M-o" 'other-window)
+(global-set-key "\M-i" 'back-window)
+(global-set-key "\C-h" 'backward-delete-char)
+(global-set-key "\M-d" 'delete-word)
+(global-set-key "\M-h" 'backward-delete-word)
